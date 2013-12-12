@@ -1,0 +1,28 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [2][-]{subsection.1.1}{Motivation}{section.1}
+\BOOKMARK [1][-]{section.2}{An Overview of Event-B}{}
+\BOOKMARK [2][-]{subsection.2.1}{An Event-B Model}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Machine Decomposition and Event Synchronization}{section.2}
+\BOOKMARK [1][-]{section.3}{Tasking Event-B: AutoTask and Shared Machines}{}
+\BOOKMARK [2][-]{subsection.3.1}{Task Scheduling}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Flow Control}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Events}{section.3}
+\BOOKMARK [2][-]{subsection.3.4}{Event Synchronization}{section.3}
+\BOOKMARK [1][-]{section.4}{Tasking Event-B: AutoTask and Environ Machines}{}
+\BOOKMARK [1][-]{section.5}{Case Study}{}
+\BOOKMARK [2][-]{subsection.5.1}{Overview of the System}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{System Development}{section.5}
+\BOOKMARK [3][-]{subsubsection.5.2.1}{First Decomposition}{subsection.5.2}
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Second Decomposition}{subsection.5.2}
+\BOOKMARK [2][-]{subsection.5.3}{Tasking Event-B}{section.5}
+\BOOKMARK [1][-]{section.6}{Writing Directly to Memory Locations}{}
+\BOOKMARK [1][-]{section.7}{Implementing the TaskBody Construct}{}
+\BOOKMARK [2][-]{subsection.7.1}{Parallel to Sequential semantics}{section.7}
+\BOOKMARK [1][-]{section.8}{Implementing Synchronized Events}{}
+\BOOKMARK [2][-]{subsection.8.1}{ProcedureSynch Events}{section.8}
+\BOOKMARK [2][-]{subsection.8.2}{Sensing and Actuating Events}{section.8}
+\BOOKMARK [2][-]{subsection.8.3}{Addressed Variables}{section.8}
+\BOOKMARK [1][-]{section.9}{Generating and Executing Code}{}
+\BOOKMARK [1][-]{section.10}{Conclusions}{}
+\BOOKMARK [2][-]{subsection.10.1}{discussion}{section.10}
+\BOOKMARK [2][-]{subsection.10.2}{Related Work}{section.10}
