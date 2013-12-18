@@ -41,8 +41,9 @@ Often when a system is being implemented, there is a large amount of code that i
 %
 \section{Event-B }
 %
-All about Event-B and Tasking Event-B
+Event-B and Tasking Event-B
 %
+IL1 and protected Objects
 %
 \section{The Use of Generated Environment Interfaces}\label{interfaces}
 %
@@ -65,7 +66,7 @@ When generating code from Tasking Event-B, we found that there was a large amoun
 \end{figure}
 %
 \subsection{A Template Example}
-In this diagram we can see that we have only three artefacts; text templates, code-fragment generators, and the text output. The templates may contain text (which is copied verbatim to the target) and insertion points. The insertion points may refer to other templates or code-fragment generators. The code-fragment generators are hard-coded generators that relate to certain aspects of the final output. By way of example, the code FMI code generator has a fragment generator that inserts the variable initialisations into the template we can see its use in~\ref{fig:templateExample}. 
+In this diagram we can see that we have a number of artefacts involved in template processing; we have text-based templates, code-fragment generators, text output, meta-data output and a template-processor that does the work. The templates may contain plain-text (which is copied verbatim to the target during processing) and tags. The tags may refer to other templates, or code-fragment generators. The code-fragment generators are hard-coded generators that relate to certain aspects of the final output. By way of example, the code FMI code generator has a fragment generator that inserts the variable initialisations into the template we can see its use in~\ref{fig:templateExample}. 
 %
 \begin{figure}
 \begin{center}
@@ -86,28 +87,76 @@ fmiStatus fmiInitializeSlave(fmiComponent c,\\
 \end{figure}
 %
 %
-The template is part of an implementation of the FMI API's \emph{fmiInitializeSlave} function. This is part of the `boiler-plate' C code for an implementation of an FMI slave, and the code in the example is common to all initialization functions. The template also contains some specialisations that depend on the model being translated. Each line of a template is scanned, and tags are processed when the \emph{template processor} reads a line beginning with //\#\#.  These characters indicate to the template processor that it should treat the line as a tag, which is usually (but not always) an insertion point. The particular character string is customizable. We have provided an extension point, for users to define which characters to use as tags, using the Eclipse extension mechanism. The string we chose allows the tag to be treated as a comment, so that the remainder of the code can be syntax checked if required. This line is continued with $<$\emph{identifier}$>$ where an \emph{identifier} is supplied.
-
-The tag, with its \emph{identifier}, can define the name of another template (to be expanded in-line); or the name of a fragment generator. The generator can either be used to generate code, or meta-data for use later in the code generation process  (see Fig.~\ref{templates}). In the example we have three tags. We will show how the template processor uses the \emph{intialisationList} tag, as a code injection point to add variable initialisations, in subsection~\ref{injection}. The first tag \emph{addToHeader} identifies a generator that creates meta-data, this used at a later stage for generation of a header file. The last tag is not used in our example, since we have no state-machine diagrams in the model. But, if we did have state-machines in the FMU, we generate code to implement its initial state, in this location.
+The template is part of an implementation of the FMI API's \emph{fmiInitializeSlave} function. This is part of the `boiler-plate' C code for an implementation of an FMI slave, and the code in the example is common to all initialization functions. The first parameter of the function is the \emph{fmiComponent}, it is the `instance' of the FMU that is to be initialised; the other parameters relate to the simulation life-cycle.  However, an FMU also keeps track of state-variables which will be different for each model. These state-variables correspond exactly to the variables of the system that have been modelled in Event-B. As part of the code generation approach we generate an intermediate-language model ( the IL1 model). The fragment-generator can use the IL1 model, in the translation to the C source code.  In the template, we a placeholder (which we call a \emph{tag}), where we want the variable initialisation to occur. The tags in our example begin with the character string, //\#\#.  This string is customizable, since we have provided an extension point, for users to define which characters to use as tags. This makes use of the Eclipse extension mechanism. The string we chose allows the tag to be treated as a comment; so, that the remainder of the code can be syntax checked if required. This line is continued with $<$\emph{identifier}$>$ where an \emph{identifier} is supplied. A tag is usually (but not always) an insertion point; its \emph{identifier} can relate to another template (to be expanded in-line); or the name of a fragment-generator. The fragment-generator is a Java class that can be used to generate code; or meta-data that is stored for later use, in the code generation process  (see Fig.~\ref{fig:templates}). In the example we have three tags. We will show how the template processor uses the \emph{intialisationList} tag, as a code injection point to add variable initialisations, in subsection~\ref{injection}. The first tag \emph{addToHeader} identifies a generator that creates meta-data, this used at a later stage for generation of a header file. The last tag is not used in our example, since we have no state-machine diagrams in the model. But, if we did have state-machines in the FMU, we generate code to implement its initial state, in this location.
 %
-\subsection{How the Template Processor Works}
-It is possible to categorize the users of Rodin into several types of users. One such type are the meta-modellers, another user may instantiate models, a third is a system administrator/programmer that provides tool for the others. The extension points that we provide allows the system administrator/programmer to provide template utilities for the other users.  The first extension point \\ \emph{org.eventb.codegen.templates.tag} has been provided to allow them to specify the \emph{tagCommentCharacters}. The second, \emph{org.eventb.codegen.templates.generator} has been provided to allow them to add new \emph{tag} names, and \emph{GeneratorClass}es that implement \emph{IGenerator}. By adding a new tag and providing a new generator implementation, a user has this new feature available for insertion into the template, to produce some specific output. 
-
-The IGenerator interface contains .... 
-When it comes across a tag - expands, or passes on to a processor.
-
-Implements IGenerator, with IGeneratorData to hold data.
-
-Generator Extensions.
-
-Looks for name in templates file
-
-Looks for name in generator extensions.
-
+\subsection{Template Tags and Generators}
+It is possible to categorize the users of Rodin into several types of users. One such type are the `ordinary' modellers, using Event-B in smaller organisations. But for large scale use one may have meta-modellers (to develop product lines for instance), another user may instantiate models (of the product line), a third is a system administrator/programmer that provides tool for the others. The extension points that we provide allows the system administrator/programmer to provide template utilities for the other users. The first extension point \\ \emph{org.eventb.codegen.templates.tag} has been provided to allow them to specify the \emph{tagCommentCharacters}. The second, \emph{org.eventb.codegen.templates.generator} has been provided to allow them to add new \emph{tag identifiers}, and \emph{GeneratorClass}es that implement \emph{IGenerator}. The \emph{IGenerator} interface defines a single \emph{generate} method which takes an instance of \emph{IGeneratorData} as a parameter. The \emph{IGeneratorData}  is a container for  a \emph{List} of objects, used by the \emph{generate} method, when generating the code fragment. The template-processor stores the link between \emph{tag identifier} and \emph{GeneratorClass} in a \emph{GeneratorMap} (repository). By adding a new \emph{tag identifier} and providing a new generator implementation, a Rodin-user (working at the implementation-level) has this new feature available for insertion into the template, to produce some specific output. 
 
 \subsection{Code Injection} \label{injection}
+We now return to our explanation of how the \emph{initialisationList} is processed, and refer back to the example shown in Fig.~\ref{fig:templateExample}. The template-processor scans each line, and copies the output; or inserts new text, or meta-data as required, until we reach the line with the \emph{initialisationList}. The template-processor finds the \emph{initialisationList} in the \emph{GeneratorMap}. It is linked to the \emph{InitialisationListGenerator} class, by the map. The class's \emph{generate} method is invoked, to begin the process of text insertion. A fragment of the \emph{InitialisationListGenerator} class can be seen in Fig.~\ref{fig:genCode}. The class defines variables that are used to hold the data retrieved from the \emph{IGeneratorData} object;  \emph{prot} and \emph{tm} are objects that are required to process the initialisations. In this case, the declarations are retrieved from the (IL1) \emph{Protected} object, and translated in turn.   
+%
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.85\textwidth}
+\textbf{public class} InitialisationsListGenerator \textbf{implements} IGenerator \{\\
+\hspace*{0.2cm}\textbf{public} List$<$String$>$ generate(IGeneratorData data)\{\\
+\hspace*{0.4cm}List$<$String$>$ outCode = \textbf{new} ArrayList$<$String$>$();\\
+\hspace*{0.4cm}Protected prot = null;\\
+\hspace*{0.4cm}IL1TranslationManager tm = null;\\
+\hspace*{0.4cm}\emph{//(1) Un-pack the GeneratorData}\\
+\hspace*{0.4cm}List$<$Object$>$ dataList = data.getDataList();\\
+\hspace*{0.4cm}\textbf{for} (Object obj : dataList) \{\\
+\hspace*{0.6cm}\textbf{if} (obj instanceof Protected) \{prot = (Protected) obj;	\}\\
+\hspace*{0.6cm}\textbf{else if}(obj instanceof IL1TranslationManager)\{\\
+\hspace*{0.8cm}tm = (IL1TranslationManager) obj;\}\}\\
+\hspace*{0.2cm}\ldots\\
+\hspace*{0.2cm}\emph{//(2) Get the Declarations}\\
+\hspace*{0.2cm}EList$<$Declaration$>$ declList = prot.getDecls();\\
+\hspace*{0.2cm}\emph{//(3) Process each Variable Declaration/Initialisation}\\
+\hspace*{0.2cm}\textbf{for} (Declaration decl : declList) \{\\
+\hspace*{0.4cm}\ldots\\
+\hspace*{0.4cm}String initialisation = FMUTranslator.updateFieldVariableName(\ldots);\\
+\hspace*{0.4cm}outCode.add(initialisation);\\
+\hspace*{0.2cm}\}\\
+\hspace*{0.2cm}\emph{// (4) return the new fragment}\\
+\hspace*{0.2cm}\textbf{return} outCode;\}\}
+\end{minipage}
+\caption{An Example Fragment-Generator}
+\label{fig:genCode}
+\end{figure}
+%
+%
 
-The example
+The main steps are highlighted using numbered comments in the code. In step 1, the data is un-packed; in step 2, the declarations are obtained from the \emph{Protected} object; in step 3, the initialisation are translated, and add to an array of initialisation statements; in step 4, the initialisations are returned to the template-processor. The code that is generated is shown in Fig.~\ref{fig:codeOut}. 
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.9\textwidth}
+fmiStatus fmiInitializeSlave(fmiComponent c, fmiReal relativeTolerance,\\
+\hspace*{0.6cm}fmiReal tStart, fmiBoolean stopTimeDefined, fmiReal tStop) \{\\
+\hspace*{0.2cm}fmi\_Component* mc = c;\\
+\hspace*{0.2cm}\emph{// (1) Injected By InitialisationsListGenerator $>>>$ }\\
+\hspace*{0.2cm}mc-$>$i[c\_level\_controllerImpl\_] = 100;\\
+\hspace*{0.2cm}mc-$>$b[c\_pumpOnReq\_controllerImpl\_] = fmiFalse;\\
+\hspace*{0.2cm}mc-$>$b[c\_pumpOnCmd\_controllerImpl\_] = fmiFalse;\\
+\hspace*{0.2cm}\ldots\\
+\hspace*{0.2cm}\emph{// (2) $<<<$ End of Injection}\\
+\hspace*{0.2cm}\textbf{return} fmiOK;\\
+\}
+\end{minipage}
+\caption{The fmiInitializeSlave Function with Injected Code}
+\label{fig:codeOut}
+\end{figure}
+
+In the generated code of Fig.~\ref{fig:codeOut} we see that variable initialisations such as,
+
+\begin{minipage}{\textwidth}
+\centering
+mc-$>$i[c\_level\_controllerImpl\_] = 100;
+\end{minipage}
+have been generated, between the comments numbered (1) and (2). This initialisation seen here is very specific to the FMU approach. The FMI component \emph{mc} identifies an FMU; its integer variables are stored in an array \emph{i}[], and a variable named \emph{c\_level\_controllerImpl}, is accessed using an index into the array \emph{c\_level\_controllerImpl\_}. This is rather complex but should demonstrate the point that we can inject code of some complexity.
+
 %
 \section{Conclusions}
 Tags for Template Expansion
