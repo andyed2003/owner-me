@@ -17,6 +17,20 @@ J.~Barnes.
 \newblock {\em {Programming in Ada 2005}}.
 \newblock International Computer Science Series. Addison Wesley, 2006.
 
+\bibitem{bloch2012}
+T.~Blochwitz, M.~Otter, J.~Akesson, M.~Arnold, C.~Clau{\ss}, H.~Elmqvist,
+  M.~Friedrich, A.~Junghanns, J.~Mauss, D.~Neumerkel, et~al.
+\newblock {Functional Mockup Interface 2.0: The Standard for Tool Independent
+  Exchange of Simulation Models}.
+\newblock In {\em 9th International Modelica Conference, Munich}, 2012.
+
+\bibitem{bloch2011}
+T.~Blochwitz, M.~Otter, M.~Arnold, C.~Bausch, C.~Clau{\ss}, H.~Elmqvist,
+  A.~Junghanns, J.~Mauss, M.~Monteiro, T.~Neidhold, et~al.
+\newblock {The Functional Mockup Interface for Tool Independent Exchange of
+  Simulation Models}.
+\newblock In {\em Modelica'2011 Conference, March}, pages 20--22, 2011.
+
 \bibitem{Edmunds2009}
 A.~Edmunds.
 \newblock {\em Providing Concurrent Implementations for Event-B Developments}.
@@ -47,6 +61,11 @@ J.~Gosling, B.~Joy, G.~Steele, and G.~Bracha.
 \bibitem{RodinTool}
 {RODIN Project}.
 \newblock at \href{http://rodin.cs.ncl.ac.uk}{http://rodin.cs.ncl.ac.uk}.
+
+\bibitem{eps360400}
+V.~Savicks, M.~Butler, J.~Bendisposto, and J.~Colley.
+\newblock {Co-simulation of Event-B and Continuous Models in Rodin}.
+\newblock In {\em 4th Rodin User and Developer Workshop}, June 2013.
 
 \bibitem{advance}
 {The Advance Project Team}.

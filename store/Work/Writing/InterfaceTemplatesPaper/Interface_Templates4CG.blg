@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Interface_Templates4CG.aux
 The style file: plain.bst
 Database file #1: MyBibTex.bib
-You've used 14 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            571 strings with 6069 characters,
-and the built_in function-call counts, 3509 in all, are:
-= -- 317
-> -- 163
-< -- 0
-+ -- 66
-- -- 52
-* -- 174
-:= -- 610
-add.period$ -- 43
-call.type$ -- 14
-change.case$ -- 63
+            585 strings with 6836 characters,
+and the built_in function-call counts, 5082 in all, are:
+= -- 445
+> -- 302
+< -- 1
++ -- 121
+- -- 104
+* -- 305
+:= -- 878
+add.period$ -- 52
+call.type$ -- 17
+change.case$ -- 96
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 140
-empty$ -- 324
-format.name$ -- 52
-if$ -- 738
+cite$ -- 17
+duplicate$ -- 189
+empty$ -- 418
+format.name$ -- 104
+if$ -- 1052
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 10
-newline$ -- 73
-num.names$ -- 28
-pop$ -- 111
+int.to.str$ -- 17
+missing$ -- 13
+newline$ -- 88
+num.names$ -- 34
+pop$ -- 155
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 84
 quote$ -- 0
-skip$ -- 101
+skip$ -- 134
 stack$ -- 0
-substring$ -- 95
-swap$ -- 17
-text.length$ -- 0
+substring$ -- 134
+swap$ -- 30
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
+type$ -- 62
 warning$ -- 0
-while$ -- 30
-width$ -- 16
-write$ -- 139
+while$ -- 39
+width$ -- 19
+write$ -- 170
