@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.6.4)  20 DEC 2013 14:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.6.4)  20 DEC 2013 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -558,67 +558,63 @@ Package hyperref Warning: bookmark level for unknown author defaults to 0.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (16.42885pt too wide) in paragraph at lines 55--72
+Overfull \hbox (16.42885pt too wide) in paragraph at lines 57--74
 []\OT1/cmr/m/n/9 VARIABLES[] []
  []
 
-[3]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-<Decomp2.png, id=107, 795.97375pt x 645.41125pt>
+[3] [4] <Decomp2.png, id=110, 795.97375pt x 645.41125pt>
 File: Decomp2.png Graphic file (type png)
  <use Decomp2.png>
-Package pdftex.def Info: Decomp2.png used on input line 88.
-(pdftex.def)             Requested size: 138.84729pt x 112.57443pt.
+Package pdftex.def Info: Decomp2.png used on input line 90.
+(pdftex.def)             Requested size: 208.27623pt x 168.87642pt.
 
-Overfull \hbox (2.48714pt too wide) in paragraph at lines 101--102
+Overfull \hbox (2.48714pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/10 Tasking Event-B [[]] is an ex-ten-sion to the Event-B lan-guage
 ; an implementation-
  []
 
 [5 <./Decomp2.png>]
-Overfull \hbox (2.48814pt too wide) in paragraph at lines 103--104
+Overfull \hbox (2.48814pt too wide) in paragraph at lines 105--106
 []\OT1/cmr/m/n/10 Machines can be im-ple-mented as task/thread-like con-structs
 ; shared, monitor-
  []
 
 
-Overfull \hbox (11.15796pt too wide) in paragraph at lines 110--113
+Overfull \hbox (11.15796pt too wide) in paragraph at lines 112--115
 | $\OMS/cmsy/m/n/10 k$ \OT1/cmr/bx/n/10 IF  \OT1/cmr/m/n/10 Event  [\OT1/cmr/bx
 /n/10 ELSEIF  \OT1/cmr/m/n/10 Event ]$[]$  \OT1/cmr/bx/n/10 ELSE  \OT1/cmr/m/n/
 10 Event \OT1/cmr/bx/n/10 END 
  []
 
-[6] <devel.png, id=141, 435.6275pt x 416.55624pt>
+[6] <devel.png, id=142, 435.6275pt x 416.55624pt>
 File: devel.png Graphic file (type png)
  <use devel.png>
-Package pdftex.def Info: devel.png used on input line 122.
-(pdftex.def)             Requested size: 208.27623pt x 199.15656pt.
- [7 <./devel.png>] <templateOverview.png, id=157, 435.6275pt x 187.70125pt>
+Package pdftex.def Info: devel.png used on input line 124.
+(pdftex.def)             Requested size: 277.69987pt x 265.53996pt.
+ [7 <./devel.png>] <templateOverview.png, id=158, 435.6275pt x 187.70125pt>
 File: templateOverview.png Graphic file (type png)
 
 <use templateOverview.png>
-Package pdftex.def Info: templateOverview.png used on input line 136.
+Package pdftex.def Info: templateOverview.png used on input line 138.
 (pdftex.def)             Requested size: 277.69987pt x 119.65294pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 150.
+ [8 <./templateOverview.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 152.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 150.
- [8 <./templateOverview.png>] [9] <templateStructure.png, id=177, 682.55pt x 34
-0.27126pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
+ [9]
+<templateStructure.png, id=177, 682.55pt x 340.27126pt>
 File: templateStructure.png Graphic file (type png)
 
 <use templateStructure.png>
-Package pdftex.def Info: templateStructure.png used on input line 172.
+Package pdftex.def Info: templateStructure.png used on input line 174.
 (pdftex.def)             Requested size: 312.40906pt x 155.74785pt.
  [10] [11 <./templateStructure.png>] [12]
 (./Interface_Templates4CG.bbl
@@ -634,25 +630,25 @@ ail-able at
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
  [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
  (./Interface_Templates4CG.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 255.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
 Package rerunfilecheck Info: File `Interface_Templates4CG.out' has not changed.
 
 (rerunfilecheck)             Checksum: 989FDB71CA1420D7F48BAB575BB6AEEC;140.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 255.
  ) 
 Here is how much of TeX's memory you used:
- 7107 strings out of 495059
- 101821 string characters out of 3182031
- 191917 words of memory out of 3000000
- 10119 multiletter control sequences out of 15000+200000
+ 7109 strings out of 495059
+ 101831 string characters out of 3182031
+ 193003 words of memory out of 3000000
+ 10121 multiletter control sequences out of 15000+200000
  11125 words of font info for 43 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,8n,26p,2422b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,26p,2422b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -667,10 +663,10 @@ y9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Interface_Templates4CG.pdf (14 pages, 349105 bytes).
+Output written on Interface_Templates4CG.pdf (14 pages, 348835 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
+ 296 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
  59 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
