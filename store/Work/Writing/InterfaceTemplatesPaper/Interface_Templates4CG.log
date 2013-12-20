@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.6.4)  20 DEC 2013 12:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.6.4)  20 DEC 2013 14:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -549,6 +549,10 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 Package hyperref Warning: bookmark level for unknown title defaults to 0.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 27.
+
+
 Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 [1
@@ -562,7 +566,11 @@ Overfull \hbox (16.42885pt too wide) in paragraph at lines 55--72
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [4] <Decomp2.png, id=108, 795.97375pt x 645.41125pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+<Decomp2.png, id=107, 795.97375pt x 645.41125pt>
 File: Decomp2.png Graphic file (type png)
  <use Decomp2.png>
 Package pdftex.def Info: Decomp2.png used on input line 88.
@@ -573,10 +581,7 @@ Overfull \hbox (2.48714pt too wide) in paragraph at lines 101--102
 ; an implementation-
  []
 
-
-Underfull \vbox (badness 3635) has occurred while \output is active []
-
- [5 <./Decomp2.png>]
+[5 <./Decomp2.png>]
 Overfull \hbox (2.48814pt too wide) in paragraph at lines 103--104
 []\OT1/cmr/m/n/10 Machines can be im-ple-mented as task/thread-like con-structs
 ; shared, monitor-
@@ -637,14 +642,14 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
 Package rerunfilecheck Info: File `Interface_Templates4CG.out' has not changed.
 
-(rerunfilecheck)             Checksum: C7723414B4879F730016490B700F915C;119.
+(rerunfilecheck)             Checksum: 989FDB71CA1420D7F48BAB575BB6AEEC;140.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
  ) 
 Here is how much of TeX's memory you used:
- 7106 strings out of 495059
- 101816 string characters out of 3182031
+ 7107 strings out of 495059
+ 101821 string characters out of 3182031
  191917 words of memory out of 3000000
- 10118 multiletter control sequences out of 15000+200000
+ 10119 multiletter control sequences out of 15000+200000
  11125 words of font info for 43 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,8n,26p,2422b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -662,7 +667,7 @@ y9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Interface_Templates4CG.pdf (14 pages, 348245 bytes).
+Output written on Interface_Templates4CG.pdf (14 pages, 349105 bytes).
 PDF statistics:
  295 PDF objects out of 1000 (max. 8388607)
  220 compressed objects within 3 object streams

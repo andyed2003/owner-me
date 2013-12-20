@@ -14,7 +14,7 @@
 %-------------------------------------------
 \begin{document}
 %
-\title{Configuring Code Generated from Event-B}
+\title{Using Templates for Configuration\\ in Event-B Code Generation}
 
 \author{A. Edmunds}
 
@@ -25,7 +25,7 @@
 \maketitle
 %
 \begin{abstract}
-The Event-B method, and  its tools, provide a way to formally model systems; Tasking Event-B is an extension facilitating code generation.  We have recently begun to explore the issue of conferability, of the generated code. In this work describe how templates can be used, which avoids the need to hard-code much of the code, that which is not directly associated with the formal model. We developed a simple approach, where tags (i.e. tagged mark-up) can be inserted in the template. Template processing involves copying code, verbatim, to a target unless a tag is encountered. Tags can be used to inject source code, or produce meta-data output, using custom code generators. This is an extensible approach, making use of the Eclipse extension-point mechanism. It can be applied to any text input file, and was used in the FMI C code generator, which we use as a running example in the paper. 
+The Event-B method, and  its tools, provide a way to formally model systems; Tasking Event-B is an extension facilitating code generation.  We have recently begun to explore how we can configure the code generator, for deployment with different targets. In this paper, we describe how templates can be used, to avoid hard-coding `boilerplate' code, which is not directly associated with the formal model, but is target specific. We have developed a lightweight approach, where tags (i.e. tagged mark-up) can be inserted in the source templates. Template processing involves copying code, verbatim, from the source to the target unless a tag is encountered. Tags can be used to inject source code, or produce meta-data output, using custom code generators. This is an extensible approach, which makes use of the Eclipse extension-point mechanism. The template-processors can be used with any text input file; and was used in a C code generator, which we use as a running example in the paper. 
  \end{abstract}
 %
 %
