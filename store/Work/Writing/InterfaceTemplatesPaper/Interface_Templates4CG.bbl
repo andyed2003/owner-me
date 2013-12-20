@@ -92,9 +92,10 @@ R.~Silva, C.~Pascal, T.S. Hoang, and M.~Butler.
 
 \bibitem{advance}
 {The Advance Project Team}.
-\newblock {The Advance Project}.
-\newblock {Available at \href{http://www.advance-ict.eu}
-  {http://www.advance-ict.eu}}.
+\newblock {Advanced Design and Verification Environment for Cyber-physical
+  System Engineering}.
+\newblock Available at \href{http://www.advance-ict.eu}
+  {http://www.advance-ict.eu}.
 
 \bibitem{DEPLOY}
 {The DEPLOY Project Team}.
@@ -102,11 +103,24 @@ R.~Silva, C.~Pascal, T.S. Hoang, and M.~Butler.
 \newblock at \href{http://www.deploy-project.eu/}
   {http://www.deploy-project.eu/}.
 
+\bibitem{acceleo}
+{The Eclipse Foundation}.
+\newblock {Acceleo - transforming models into code}.
+\newblock Available at
+  \href{http://www.eclipse.org/acceleo/}{http://www.eclipse.org/acceleo/}.
+
 \bibitem{JET}
-{The Eclipse M2T Project}.
-\newblock {Java Emitter Templates}.
+{The Eclipse Foundation}.
+\newblock {JET - Java Emitter Templates}.
 \newblock Available at
   \href{http://www.eclipse.org/modeling/m2t/?project=jet\#jet}{http://www.eclipse.org/modeling/m2t/?project=jet\#jet}.
+
+\bibitem{xpand}
+{The Eclipse Foundation}.
+\newblock {Xpand: A language specialized on code generation based on EMF
+  models}.
+\newblock Available at
+  \href{http://wiki.eclipse.org/Xpand}{http://wiki.eclipse.org/Xpand}.
 
 \bibitem{FMISTD}
 {The Modelica Association Project}.
