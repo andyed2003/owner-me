@@ -87,7 +87,8 @@ R.~Silva, C.~Pascal, T.S. Hoang, and M.~Butler.
 
 \bibitem{advance}
 {The Advance Project Team}.
-\newblock {The Advance Project}.
+\newblock {Advanced Design and Verification Environment for Cyber-physical
+  System Engineering}.
 \newblock {Available at \href{http://www.advance-ict.eu}
   {http://www.advance-ict.eu}}.
 
@@ -96,6 +97,19 @@ R.~Silva, C.~Pascal, T.S. Hoang, and M.~Butler.
 \newblock {Project Website}.
 \newblock at \href{http://www.deploy-project.eu/}
   {http://www.deploy-project.eu/}.
+
+\bibitem{acceleo}
+{The Eclipse Foundation}.
+\newblock {Acceleo - transforming models into code}.
+\newblock Available at
+  \href{http://www.eclipse.org/acceleo/}{http://www.eclipse.org/acceleo/}.
+
+\bibitem{xpand}
+{The Eclipse Foundation}.
+\newblock {Xpand: A language specialized on code generation based on EMF
+  models}.
+\newblock Available at
+  \href{http://wiki.eclipse.org/Xpand}{http://wiki.eclipse.org/Xpand}.
 
 \bibitem{JET}
 {The Eclipse M2T Project}.
