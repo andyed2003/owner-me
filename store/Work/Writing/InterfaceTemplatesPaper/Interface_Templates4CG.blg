@@ -3,46 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Interface_Templates4CG.aux
 The style file: plain.bst
 Database file #1: MyBibTex.bib
+Warning--I didn't find a database entry for "acceleo"
+Warning--I didn't find a database entry for "xpand"
 Warning--can't use both volume and number fields in Butler09a
-You've used 23 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            619 strings with 7718 characters,
-and the built_in function-call counts, 6619 in all, are:
-= -- 591
-> -- 366
+            610 strings with 7169 characters,
+and the built_in function-call counts, 5875 in all, are:
+= -- 526
+> -- 329
 < -- 2
-+ -- 147
-- -- 124
-* -- 388
-:= -- 1140
-add.period$ -- 72
-call.type$ -- 23
-change.case$ -- 124
++ -- 132
+- -- 112
+* -- 354
+:= -- 1015
+add.period$ -- 63
+call.type$ -- 20
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 252
-empty$ -- 559
-format.name$ -- 124
-if$ -- 1376
+cite$ -- 21
+duplicate$ -- 224
+empty$ -- 487
+format.name$ -- 112
+if$ -- 1217
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 17
-newline$ -- 119
-num.names$ -- 46
-pop$ -- 193
+int.to.str$ -- 20
+missing$ -- 16
+newline$ -- 104
+num.names$ -- 40
+pop$ -- 166
 preamble$ -- 1
-purify$ -- 106
+purify$ -- 94
 quote$ -- 0
-skip$ -- 179
+skip$ -- 156
 stack$ -- 0
-substring$ -- 183
-swap$ -- 40
+substring$ -- 168
+swap$ -- 36
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
+type$ -- 74
 warning$ -- 1
-while$ -- 53
-width$ -- 25
-write$ -- 233
-(There was 1 warning)
+while$ -- 47
+width$ -- 22
+write$ -- 205
+(There were 3 warnings)

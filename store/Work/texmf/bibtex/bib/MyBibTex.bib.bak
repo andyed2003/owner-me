@@ -2346,6 +2346,12 @@
   howpublished = {Available at \href{http://www.eclipse.org/modeling/} {http://www.eclipse.org/modeling/}}
 }
 
+@MISC{EclipseJDT,
+  author = {{The Eclipse Foundation}},
+  title = {{Eclipse Java Development Tools (JDT) Subproject}},
+  howpublished = {Available at \href{http://www.eclipse.org/jdt/} {http://www.eclipse.org/jdt/}}
+}
+
 @MISC{EclipseOrg,
   author = {{The Eclipse Foundation}},
   title = {{Eclipse - an Open Development Platform}},
@@ -2368,12 +2374,6 @@
   owner = {andy},
   quality = {1},
   timestamp = {2013.12.20}
-}
-
-@MISC{EclipseJDT,
-  author = {{The Eclipse Project Team}},
-  title = {{Eclipse Java Development Tools (JDT) Subproject}},
-  howpublished = {Available at \href{http://www.eclipse.org/jdt/} {http://www.eclipse.org/jdt/}}
 }
 
 @MISC{POSIXStd,

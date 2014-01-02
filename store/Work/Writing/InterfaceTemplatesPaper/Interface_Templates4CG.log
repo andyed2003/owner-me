@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.6.4)  23 DEC 2013 16:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.1)  2 JAN 2014 10:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,7 +381,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip48
 )
-(/home/andy/texmf/tex/latex/enumitem/enumitem.sty
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip49
 \enit@outerparindent=\dimen138
@@ -595,7 +595,14 @@ File: devel.png Graphic file (type png)
  <use devel.png>
 Package pdftex.def Info: devel.png used on input line 124.
 (pdftex.def)             Requested size: 312.40906pt x 259.90181pt.
- [7 <./devel.png>] <templateOverview.png, id=163, 435.6275pt x 187.70125pt>
+ [7 <./devel.png>]
+
+LaTeX Warning: Citation `acceleo' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `xpand' on page 8 undefined on input line 134.
+
+<templateOverview.png, id=159, 435.6275pt x 187.70125pt>
 File: templateOverview.png Graphic file (type png)
 
 <use templateOverview.png>
@@ -609,7 +616,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
- [8] [9 <./templateOverview.png>] <templateStructure.png, id=184, 682.55pt x 34
+ [8] [9 <./templateOverview.png>] <templateStructure.png, id=178, 682.55pt x 34
 0.27126pt>
 File: templateStructure.png Graphic file (type png)
 
@@ -617,6 +624,18 @@ File: templateStructure.png Graphic file (type png)
 Package pdftex.def Info: templateStructure.png used on input line 176.
 (pdftex.def)             Requested size: 312.40906pt x 155.74785pt.
  [10] [11 <./templateStructure.png>] [12]
+
+LaTeX Warning: Citation `acceleo' on page 13 undefined on input line 250.
+
+
+LaTeX Warning: Citation `xpand' on page 13 undefined on input line 250.
+
+
+LaTeX Warning: Citation `acceleo' on page 13 undefined on input line 250.
+
+
+LaTeX Warning: Citation `xpand' on page 13 undefined on input line 250.
+
 (./Interface_Templates4CG.bbl
 Underfull \hbox (badness 1430) in paragraph at lines 21--26
 []\OT1/cmr/m/n/9 T. Blochwitz, M. Ot-ter, J. Akesson, M. Arnold, C. Clau^^Y, H.
@@ -624,9 +643,15 @@ Underfull \hbox (badness 1430) in paragraph at lines 21--26
  []
 
 [13]
-Underfull \hbox (badness 1342) in paragraph at lines 113--117
-[]\OT1/cmr/m/n/9 The Eclipse Foun-da-tion.  JET - Java Emit-ter Tem-plates.  Av
-ail-able at
+Underfull \hbox (badness 5519) in paragraph at lines 89--93
+[]\OT1/cmr/m/n/9 The Ad-vance Project Team.  The Ad-vance Project.  Avail-able 
+at
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 101--105
+[]\OT1/cmr/m/n/9 The Eclipse M2T Project.  Java Emit-ter Tem-plates.  Avail-abl
+e at
  []
 
 )
@@ -642,10 +667,10 @@ Package rerunfilecheck Info: File `Interface_Templates4CG.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
  ) 
 Here is how much of TeX's memory you used:
- 7109 strings out of 495059
- 101831 string characters out of 3182031
- 192003 words of memory out of 3000000
- 10121 multiletter control sequences out of 15000+200000
+ 7105 strings out of 495059
+ 101823 string characters out of 3182031
+ 191926 words of memory out of 3000000
+ 10120 multiletter control sequences out of 15000+200000
  11125 words of font info for 43 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,8n,26p,2177b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -663,10 +688,10 @@ y9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Interface_Templates4CG.pdf (14 pages, 385262 bytes).
+Output written on Interface_Templates4CG.pdf (14 pages, 384649 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
+ 290 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
